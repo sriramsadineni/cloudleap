@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 transition-colors duration-200;
+  }
+  
+  .dark body {
+    @apply bg-dark text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-600 text-white px-4 py-2 rounded-md font-medium transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-white dark:bg-dark-800 text-primary dark:text-primary-400 hover:bg-gray-100 dark:hover:bg-dark-700 px-4 py-2 rounded-md font-medium transition-colors;
+  }
+  
+  .btn-dark {
+    @apply bg-dark hover:bg-dark-800 text-white px-4 py-2 rounded-md font-medium transition-colors;
+  }
+  
+  .section-light {
+    @apply bg-white dark:bg-dark;
+  }
+  
+  .section-dark {
+    @apply bg-dark text-white;
+  }
+  
+  .section-primary {
+    @apply bg-primary-600 dark:bg-primary-700 text-white;
+  }
+  
+  .section-light-alt {
+    @apply bg-gray-50 dark:bg-dark-800;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+} 
